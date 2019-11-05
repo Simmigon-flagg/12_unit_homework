@@ -28,13 +28,14 @@ If you see a time delay, it's likely that you can inject commands and run arbitr
 #### Prevention 
 The only sure way to prevent Injection attacks is input validation and parametrized queries including prepared statements. The application code should never use the input directly. The developer must sanitize all input, not only web form inputs such as login forms. They must remove potential malicious code elements such as single quotes. It is also a good idea to turn off the visibility of database errors on your production sites. Database errors can be used with SQL Injection to gain information about your database.The use of positive or "whitelist" server-side input validation is good start but is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications. It is important to note that SQL structures such as table names, column names, cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report-writing software. The use of the LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection can be a last resort effort.
 
+#### A1:2017
+### Insufficient Logging & Monitorings
 #### Logging 
 is the process of collecting and storing data over a period of time in order to analyze specific trends or record the data-based events/actions of a system, network or IT environment. It enables the tracking of all interactions through which data, files or applications are stored, accessed or modified on a storage device or application.
 
 #### Application monitoring
 is a process that ensures that a software application processes and performs in an expected manner and scope. This technique routinely identifies, measures and evaluates the performance of an application and provides the means to isolate and rectify any abnormalities or shortcomings.
 
-#### Insufficient Logging & Monitoring
 Most issue with logging and monitoring comes from poor setup and implementation
 Basic devices such as web, mail  and database servers have logging enabled but what's needed in most cases
 are Application logging itself. With Application logging missing, hackers can attack end users by stealing their data and 
